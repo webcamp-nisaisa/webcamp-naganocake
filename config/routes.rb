@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :customers,skip:[:passwords],controllers:{
-    registrations:"customer/registrations",
+    registrations:"customer/registrations",except:[:edit],
     sessions:"customer/sessions"
   }
 
