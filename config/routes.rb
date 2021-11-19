@@ -25,7 +25,9 @@ Rails.application.routes.draw do
     resources:orders,only:[:new,:create,:index,:show]
     post "/orders/confirm" => "orders#confirm"
     get "/orders/complete" => "orders#complete"
-    resource:customers,only:[:show,:edit,:update]
+    get "/customers/mypage" => "customers#show"
+    get "/customers/mypage/edit" => "customers#edit"
+    patch "/customers/mypage/update" => "customers#update"
     get "/customers/unsubscribe" => "customers#unsubscribe"
     patch "/customers/withdraw" => "customers#withdraw"
     resources:shippings,except:[:new,:show]
