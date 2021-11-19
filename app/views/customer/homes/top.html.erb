@@ -16,9 +16,9 @@
           <td>
             <%= link_to item_path(item) do %>
               <%= attachment_image_tag(item, :image, :fill, 100, 100) %><br>
+              <%= item.name %><br>
             <% end %>
-            <%= item.name %><br>
-            ¥<%= item.price.to_s(:delimited) %>(税抜)
+            ¥<%= (item.price * 1.1).round.to_s(:delimited) %>(税込)
           </td>
          <% end %>
         </tr>
