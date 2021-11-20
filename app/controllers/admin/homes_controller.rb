@@ -1,6 +1,5 @@
-class Customer::HomesController < ApplicationController
+class Admin::HomesController < ApplicationController
   def top
-    @items = Item..order('id DESC').limit(4)
   end
   def about
   end
