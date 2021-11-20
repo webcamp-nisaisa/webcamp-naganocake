@@ -7,6 +7,14 @@ class Customer::OrdersController < ApplicationController
     @transfer_ja=Order.payment_methods_i18n[:transfer]
   end
 
+  def index
+    @orders = Order.all
+  end
+
+  def show
+    @order = Order.find(params[:id])
+  end
+
   def confirm
     @cart_items=current_customer.cart_items
 
@@ -29,9 +37,11 @@ class Customer::OrdersController < ApplicationController
   end
 
   def create
-    order=Order.create(order_params)
+    order=Order.new(order_params)
+    order.customer_id=current_customer.id
+    order.save
     current_customer.cart_items.each do |cart_item|
-      Order_item.create(order_id: order.id,item_id: cart_item.item_id,amount: cart_item.amount,add_tax_price: cart_item.item.add_tax_price)
+      OrderItem.create(order_id: order.id,item_id: cart_item.item_id,amount: cart_item.amount,add_tax_price: cart_item.item.add_tax_price)
     end
     current_customer.cart_items.destroy_all
     redirect_to orders_complete_path
