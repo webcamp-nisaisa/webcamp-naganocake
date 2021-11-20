@@ -6,6 +6,7 @@
   	<li class="nav-form">完了</li>
   </ol>
 
+
   <div class="row mt-5">
     <div class="col-lg-7">
       <table class="table">
@@ -17,8 +18,8 @@
         </thead>
         <% @cart_items.each do |cart_item| %>
         <tr>
-          <td><%= cart_item.items.name %></td>
-          <td><%= cart_item.items.add_tax_price %></td>
+          <td><%= cart_item.item.name %></td>
+          <td><%= cart_item.item.add_tax_price %></td>
           <td><%= cart_item.amount %></td>
           <td><%= cart_item.subtotal %></td>
         </tr>
