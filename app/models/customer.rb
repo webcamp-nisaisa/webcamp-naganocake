@@ -7,4 +7,11 @@ class Customer < ApplicationRecord
   has_many:orders,dependent: :destroy
   has_many:cart_items,dependent: :destroy
   has_many:shippings,dependent: :destroy
+
+  def full_address
+    '〒' + post_code + ' ' + address + ' '
+  end
+  def full_name
+    last_name + first_name
+  end
 end
