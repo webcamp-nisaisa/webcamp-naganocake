@@ -9,7 +9,4 @@ class Order < ApplicationRecord
     total_price+shipping_fee
   end
 
-  def sum_of_item_price
-    add_tax_price*amount
-  end
 end
