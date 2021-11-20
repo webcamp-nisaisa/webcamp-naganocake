@@ -7,6 +7,14 @@ class Customer::OrdersController < ApplicationController
     @transfer_ja=Order.payment_methods_i18n[:transfer]
   end
 
+  def index
+    @orders = Order.all
+  end
+
+  def show
+    @order = Order.find(params[:id])
+  end
+
   def confirm
     @cart_items=current_customer.cart_items
 
