@@ -165,3 +165,6 @@ Item.create(
     ]
   )
 
+Order.create!(
+   shipping_fee: '800',
+)
