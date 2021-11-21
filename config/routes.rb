@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources:items,exept:[:destroy]
     resources:genres,except:[:new,:show,:destroy]
     resources:orders,only:[:show,:update]
-    resources:order_items,only:[]
+    resources:order_items,only:[:update]
   end
 
   devise_for :customers,skip:[:passwords],controllers:{
