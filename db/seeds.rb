@@ -8,3 +8,7 @@
 
 admin = Admin.new(:email => 'admin@admin.com', :password => 'naganocake')
 admin.save!
+
+Order.create!(
+   shipping_fee: '800',
+)
