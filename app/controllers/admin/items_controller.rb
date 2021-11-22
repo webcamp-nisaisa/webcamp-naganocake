@@ -1,5 +1,5 @@
 class Admin::ItemsController < ApplicationController
-  # before_action :authenticate_admin!
+  before_action :authenticate_admin!
   def index
     @items = Item.page(params[:page])
   end
@@ -40,4 +40,5 @@ class Admin::ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:genre_id, :name, :description, :price, :image, :is_active)
     end
+
 end
