@@ -28,7 +28,7 @@
         <td>
           <%= form_with url: admin_order_path(@order), model:@order, method: :patch, local:true do |f| %>
             <%= f.select :ordering_status, Order.ordering_statuses_i18n.invert, {}, {class: "mr-5",required: true} %>
-            <%= f.submit "更新", class: "btn btn-success" %>
+            <%= f.submit "更新", class: "btn register_button motion" %>
           <% end %>
         </td>
       </tr>
@@ -57,7 +57,7 @@
             <td>
               <%= form_with url: admin_order_item_path(order_item), model:order_item, method: :patch, local:true do |s| %>
                 <%= s.select :making_status, OrderItem.making_statuses_i18n.invert, {}, {class: "mr-5",required: true} %>
-                <%= s.submit "更新", class: "btn btn-success" %>
+                <%= s.submit "更新", class: "btn register_button motion" %>
               <% end %>
             </td>
           </tr>
