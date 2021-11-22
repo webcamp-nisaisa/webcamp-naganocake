@@ -1,10 +1,12 @@
-<div class="p-5">
-  <h4>ジャンル編集</h4>
-  <div class="mt-5">
-    <%= form_with model:@genre,url:"/admin/genres/#{@genre.id}",local:true do |f| %>
-      <%= f.label:"ジャンル名" %>
-      <%= f.text_field:name %>
-      <%= f.submit "変更を保存",class:"btn btn-success ml-5" %>
-    <% end %>
+<div class="row">
+  <div class="col m-3">
+    <h3><mark>ジャンル編集</mark></h3>
+    <div class="mt-5">
+      <%= form_with model:@genre,url:"/admin/genres/#{@genre.id}",local:true do |f| %>
+        <%= f.label:"ジャンル名" %>
+        <%= f.text_field:name %>
+        <%= f.submit "変更を保存",class:"btn register_button motion ml-5" %>
+      <% end %>
+    </div>
   </div>
-</div>
+https://github.com/webcamp-nisaisa/webcamp-naganocake/pull/26/conflict?name=app%252Fviews%252Fadmin%252Fgenres%252Findex.html.erb&ancestor_oid=95f434e3ea51e184d34b3683ea9a47416dc5facd&base_oid=ac98db3165d807d6fa0ffcc6973c120947435f13&head_oid=ac06186d7f21e5e8b77f2c783b08518dfc95b093</div>

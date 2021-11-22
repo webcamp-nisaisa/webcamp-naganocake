@@ -1,9 +1,9 @@
-<div class="container">
-
-	<h3>注文履歴一覧</h3>
-		<table class="table table-bordered">
+<div class="row">
+  <div class="col m-3">
+    <h3><mark>注文履歴一覧</mark></h3>
+		<table class="table table-bordered mt-5">
 		  <tbody>
-			<tr>
+			<tr class="table-color">
 				<td>注文日</td>
 				<td>配送先</td>
 				<td>注文商品</td>
@@ -18,18 +18,17 @@
 					  　<%= order.address %></br>
 					  　<%= order.name %>
 					</td>
-					
-					<td>  　
+					<td>
 						<% order.order_items.each do |order_item| %>
 							<%= order_item.item.name %></br>
 						<% end %>
 					</td>
-				
 					<td><%= order.total_price.to_s(:delimited) %></td>
 					<td><%= order.ordering_status_i18n %></td>
-					<td><%= link_to "表示する", order_path(order), class: "btn btn-primary btn btn-primary btn-sm" %></td>
+					<td><%= link_to "表示する", order_path(order), class: "btn move_button motion" %></td>
 				</tr>
 			<% end %>
-		  </tbody>
+ 	    </tbody>
 		</table>
+	</div>
 </div>

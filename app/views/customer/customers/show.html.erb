@@ -1,39 +1,38 @@
-<div class="container">
-
-		<h3>マイページ</h3>
-
-		<div class="col d-flex align-items-center">
-			<h4><strong>登録情報</strong></h4> <%= link_to "編集", customers_mypage_edit_path, class: "btn btn-success" %>
+<div class="row">
+  <div class="col m-3">
+    <h3><mark>マイページ</mark></h3>
+		<div class="col d-flex align-items-center p-4">
+			<h4><strong>登録情報</strong></h4> <%= link_to "編集", customers_mypage_edit_path, class: "btn move_button motion" %>
 		</div>
-
 		<table class="table table-bordered">
 			<tr>
-				<td scope="col">氏名</td><td scope="col"><%= @customer.last_name %> <%= @customer.first_name %></td>
+				<td class="table-color">氏名</td><td><%= @customer.last_name %> <%= @customer.first_name %></td>
 			</tr>
 			<tr>
-				<td>カナ</td>
+				<td class="table-color">カナ</td>
 				<td><%= @customer.last_name_kana %> <%= @customer.first_name_kana %></td>
 			</tr>
 			<tr>
-				<td>郵便番号</td>
+				<td class="table-color">郵便番号</td>
 				<td><%= @customer.post_code %></td></tr>
 			<tr>
-				<td>住所</td>
+				<td class="table-color">住所</td>
 				<td><%= @customer.address %></td></tr>
 			<tr>
-				<td>電話番号</td>
+				<td class="table-color">電話番号</td>
 				<td><%= @customer.phone_number %></td></tr>
 			<tr>
-				<td>メールアドレス</td>
+				<td class="table-color">メールアドレス</td>
 				<td><%= @customer.email %></td></tr>
 		</table>
 
-		<div class="col d-flex align-items-center">
+		<div class="col d-flex align-items-center m-3">
 			<h4><strong>配送先</strong></h4>
-			<%= link_to "一覧を見る", shippings_path, class: "btn btn-primary"%>
+			<%= link_to "一覧を見る", shippings_path, class: "btn move_button motion ml-3"%>
 		</div>
-		<div class="col d-flex align-items-center">
+		<div class="col d-flex align-items-center mt-3">
 			<h4><strong>注文履歴</strong></h4>
-			<%= link_to "一覧を見る", orders_path, class: "btn btn-primary"%>
+			<%= link_to "一覧を見る", orders_path, class: "btn move_button motion ml-3"%>
 		</div>
+	</div>
 </div>

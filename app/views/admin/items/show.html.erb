@@ -1,43 +1,43 @@
-<div class="container mt-5 mb-5">
-  <h3>商品詳細</h3>
+<div class= "m-3">
+	<h3><mark>商品詳細</mark></h3>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="text-center">
+      <%= attachment_image_tag @item, :image, size: '300x300', format: 'jpeg', fallback: "no_image.jpg" %>
+    </div>
+  </div>
   <div class="row">
-  	<div class="col-md-6">
-  		<div class="text-center">
-        <%= attachment_image_tag @item, :image, :fill, 300, 300, format: 'jpeg', fallback: "no_image.jpg" %>
-      </div>
-    </div>
-    <div class="row">
-  		<table class="table table-borderless">
-		    <tr>
-			    <th>商品名</th>
-			    <td><%= @item.name %></td>
-		    </div>
-		    <tr>
-			    <th>商品説明</th>
-			    <td><%= @item.description %></td>
-		    </tr>
-		    <tr>
-			    <th>ジャンル</th>
-			    <td><%= @item.genre.name %></td>
-		    </tr>
-		    <tr>
-			    <th>税込価格<br>(税抜価格)</th>
-			    <td><%= @item.add_tax_price.to_s(:delimited) %>円(<%= @item.price.to_s(:delimited) %>円)</td>
-		    </tr>
-		    <tr>
-			    <th>販売ステータス</th>
-			    <td>
-			      <% if @item.is_active == true %>
-			        販売中
-			      <% else %>
-			        販売停止中
-			      <% end %>
-			    </td>
-		    </tr>
-		　　<tr>
-			    <td><%= link_to "編集する", edit_admin_item_path(@item), class: "btn btn-success" %></td>
-		    </tr>
-		  </table>
-    </div>
+		<table class="table table-borderless">
+	    <tr>
+		    <th>商品名</th>
+		    <td><%= @item.name %></td>
+	    </div>
+	    <tr>
+		    <th>商品説明</th>
+		    <td><%= @item.description %></td>
+	    </tr>
+	    <tr>
+		    <th>ジャンル</th>
+		    <td><%= @item.genre.name %></td>
+	    </tr>
+	    <tr>
+		    <th>税込価格<br>(税抜価格)</th>
+		    <td><%= @item.add_tax_price.to_s(:delimited) %>円(<%= @item.price.to_s(:delimited) %>円)</td>
+	    </tr>
+	    <tr>
+		    <th>販売ステータス</th>
+		    <td>
+		      <% if @item.is_active == true %>
+		        販売中
+		      <% else %>
+		        販売停止中
+		      <% end %>
+		    </td>
+	    </tr>
+	　　<tr>
+		    <td><%= link_to "編集する", edit_admin_item_path(@item), class: "btn move_button motion" %></td>
+	    </tr>
+	  </table>
   </div>
 </div>
