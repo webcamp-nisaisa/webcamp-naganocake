@@ -39,8 +39,8 @@
     <div class="row">
       <div class="col-md-8">
         <table class="table table-hover table-inverse">
-          <thead>
-            <tr class="table-active">
+          <thead class="table-color">
+            <tr>
               <th>商品名</th>
               <th>単価(税込)</th>
               <th>数量</th>
@@ -69,15 +69,15 @@
       <div class="offset-md-1">
         <table class="table table-borderless">
           <tr>
-            <th>商品合計</th>
+            <th class="table-color">商品合計</th>
             <td><%= @total_price_except_fee.to_s(:delimited) %>円</td>
           </tr>
           <tr>
-            <th>送料</th>
+            <th class="table-color">送料</th>
             <td><%= @order.shipping_fee.to_s(:delimited) %>円</td>
           </tr>
           <tr>
-            <th>請求金額合計</th>
+            <th class="table-color">請求金額合計</th>
             <td><%= @order.total_price.to_s(:delimited) %>円</td>
           </tr>
         </table>
