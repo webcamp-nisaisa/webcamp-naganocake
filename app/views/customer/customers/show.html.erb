@@ -3,7 +3,7 @@
 		<h3>マイページ</h3>
 
 		<div class="col d-flex align-items-center">
-			<h4><strong>登録情報</strong></h4> <%= link_to "編集", customers_mypage_edit_path, class: "btn btn-success" %>
+			<h4><strong>登録情報</strong></h4> <%= link_to "編集", customers_mypage_edit_path, class: "btn ml-3 register_button motion" %>
 		</div>
 
 		<table class="table table-bordered">
@@ -28,12 +28,12 @@
 				<td><%= @customer.email %></td></tr>
 		</table>
 
-		<div class="col d-flex align-items-center">
+		<div class="col d-flex align-items-center mt-3">
 			<h4><strong>配送先</strong></h4>
-			<%= link_to "一覧を見る", shippings_path, class: "btn btn-primary"%>
+			<%= link_to "一覧を見る", shippings_path, class: "btn ml-3 move_button motion"%>
 		</div>
-		<div class="col d-flex align-items-center">
+		<div class="col d-flex align-items-center mt-3">
 			<h4><strong>注文履歴</strong></h4>
-			<%= link_to "一覧を見る", orders_path, class: "btn btn-primary"%>
+			<%= link_to "一覧を見る", orders_path, class: "btn ml-3 move_button motion"%>
 		</div>
 </div>
