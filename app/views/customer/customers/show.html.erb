@@ -1,11 +1,9 @@
-<div class="container">
-
-		<h3>マイページ</h3>
-
-		<div class="col d-flex align-items-center">
-			<h4><strong>登録情報</strong></h4> <%= link_to "編集", customers_mypage_edit_path, class: "btn ml-3 register_button motion" %>
+<div class="row">
+  <div class="col m-3">
+    <h3><mark>マイページ</mark></h3>
+		<div class="col d-flex align-items-center p-4">
+			<h4><strong>登録情報</strong></h4> <%= link_to "編集", customers_mypage_edit_path, class: "btn btn-success" %>
 		</div>
-
 		<table class="table table-bordered">
 			<tr>
 				<td scope="col">氏名</td><td scope="col"><%= @customer.last_name %> <%= @customer.first_name %></td>
@@ -27,13 +25,14 @@
 				<td>メールアドレス</td>
 				<td><%= @customer.email %></td></tr>
 		</table>
-
-		<div class="col d-flex align-items-center mt-3">
+	
+		<div class="col d-flex align-items-center">
 			<h4><strong>配送先</strong></h4>
-			<%= link_to "一覧を見る", shippings_path, class: "btn ml-3 move_button motion"%>
+			<%= link_to "一覧を見る", shippings_path, class: "btn btn-primary"%>
 		</div>
-		<div class="col d-flex align-items-center mt-3">
+		<div class="col d-flex align-items-center">
 			<h4><strong>注文履歴</strong></h4>
-			<%= link_to "一覧を見る", orders_path, class: "btn ml-3 move_button motion"%>
+			<%= link_to "一覧を見る", orders_path, class: "btn btn-primary"%>
 		</div>
+	</div>
 </div>
