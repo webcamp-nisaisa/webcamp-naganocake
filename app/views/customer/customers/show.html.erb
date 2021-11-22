@@ -8,23 +8,23 @@
 
 		<table class="table table-bordered">
 			<tr>
-				<td scope="col">氏名</td><td scope="col"><%= @customer.last_name %> <%= @customer.first_name %></td>
+				<td class = "table-color">氏名</td><td><%= @customer.last_name %> <%= @customer.first_name %></td>
 			</tr>
 			<tr>
-				<td>カナ</td>
+				<td class = "table-color">カナ</td>
 				<td><%= @customer.last_name_kana %> <%= @customer.first_name_kana %></td>
 			</tr>
 			<tr>
-				<td>郵便番号</td>
+				<td class = "table-color">郵便番号</td>
 				<td><%= @customer.post_code %></td></tr>
 			<tr>
-				<td>住所</td>
+				<td class = "table-color">住所</td>
 				<td><%= @customer.address %></td></tr>
 			<tr>
-				<td>電話番号</td>
+				<td class = "table-color">電話番号</td>
 				<td><%= @customer.phone_number %></td></tr>
 			<tr>
-				<td>メールアドレス</td>
+				<td class = "table-color">メールアドレス</td>
 				<td><%= @customer.email %></td></tr>
 		</table>
 
