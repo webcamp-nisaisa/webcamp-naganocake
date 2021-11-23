@@ -53,11 +53,10 @@
 
 
 .about{
-  background-image: url("cake2.jpeg");
+  background-image: url("201119_cake_5.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
   height: 700px;
   display: flex;
@@ -66,7 +65,7 @@
 }
 
 .about-text{
- background-color: rgba(255,255,255,0.7);
+ background-color: rgba(255,255,255,0.5);
 }
 
 .link{
@@ -75,5 +74,16 @@
 
 body{
  font-family: "Cormorant Garamond";
- font-size: 20px;
+ font-size: 25px;
+}
+
+.top-image{
+ background-image: url(top.jpeg);
+ height: 350px;
+ background-size: cover;
+ background-position: center;
+}
+
+.top h4{
+ color: white;
 }

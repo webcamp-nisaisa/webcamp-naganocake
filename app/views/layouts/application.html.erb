@@ -6,8 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&text=0123456789" rel="stylesheet">
   </head>
   <body class="d-flex flex-column vh-100">
     <header>
@@ -43,7 +42,11 @@
       </nav>
     </header>
 
-<% if current_page?(about_path) %>
+<% if current_page?(root_path) %>
+  <main class="mb-auto top">
+    <%= yield %>
+  </main>
+<% elsif current_page?(about_path) %>
   <main class="mb-auto about">
     <%= yield %>
   </main>
