@@ -4,7 +4,7 @@ class Admin::OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @order_items = @order.order_items
     @total_price_except_fee = @order_items.inject(0) { |sum, item| sum + item.sum_of_item_price }
-    @order.total_price=@total_price_except_fee + @order.shipping_fee
+    @order.total_price = @total_price_except_fee + @order.shipping_fee
   end
   
   def update

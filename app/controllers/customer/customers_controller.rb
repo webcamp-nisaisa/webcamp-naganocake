@@ -10,8 +10,11 @@ class Customer::CustomersController < ApplicationController
   end
 
   def update
-  	current_customer.update(customer_params)
-  	redirect_to customers_mypage_path
+  	if current_customer.update(customer_params)
+  	  redirect_to customers_mypage_path
+  	else
+  	  redirect_to request.referer
+  	end
   end
 
   def unsubscribe

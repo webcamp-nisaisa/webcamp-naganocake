@@ -9,7 +9,7 @@ class Customer::OrdersController < ApplicationController
   end
 
   def index
-    @orders = Order.all
+    @orders = current_customer.orders
   end
 
   def show
@@ -40,12 +40,15 @@ class Customer::OrdersController < ApplicationController
   def create
     order=Order.new(order_params)
     order.customer_id=current_customer.id
-    order.save
-    current_customer.cart_items.each do |cart_item|
-      OrderItem.create(order_id: order.id,item_id: cart_item.item_id,amount: cart_item.amount,add_tax_price: cart_item.item.add_tax_price)
+    if order.save
+      current_customer.cart_items.each do |cart_item|
+        OrderItem.create(order_id: order.id,item_id: cart_item.item_id,amount: cart_item.amount,add_tax_price: cart_item.item.add_tax_price)
+      end
+      current_customer.cart_items.destroy_all
+      redirect_to orders_complete_path
+    else
+      redirect_to action: :new
     end
-    current_customer.cart_items.destroy_all
-    redirect_to orders_complete_path
   end
 
   def complete
