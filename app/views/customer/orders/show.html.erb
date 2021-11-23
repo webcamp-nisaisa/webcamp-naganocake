@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col m-3">
-  
-  	
+  	<h3><mark>注文履歴詳細</mark></h3>
+
   <div class="row">
-	  <div class="col-md-7">
-		    <h3><mark>注文履歴詳細</mark></h3>
-					<p class="mt-3">注文情報</p>
+	  <div class="col-7">
+
+					<h4 class="mt-3"><strog>注文情報</strog></h4>
 						<table class="table table-bordered">
 							<tbody>
 								<tr>
@@ -30,8 +30,8 @@
 							</tbody>
 						</table>
 			</div>
-			<div class="col-md-4">
-				<p>請求情報</p>
+			<div class="col-4">
+				<h4 class="mt-3"><strog>請求情報</strog></h4>
 					<table class="table table-bordered">
 						<tbody>
 							<tr>
@@ -51,25 +51,29 @@
 				</div>
 		</div>
 
-	<p>注文内容</p>
-	　<table class="table table-bordered">
-	　	<tbody>
-		　	<tr class="table-color">
-		　		<td>商品</td>
-		　		<td>単価（税込）</td>
-		　		<td>個数</td>
-		　		<td>小計</td>
-		　	</tr>
-
-			　<% @order.order_items.each do |order_item| %>
-			　	<tr>
-			　		<td><%= order_item.item.name %></td>
-			　		<td><%= order_item.add_tax_price.to_s(:delimited) %>円</td>
-			　		<td><%= order_item.amount %>個</td>
-			　		<td><%= order_item.sum_of_item_price.to_s(:delimited) %>円</td>
-			　	</tr>
-			　<% end %>
-			</tbody>
-	　</table>
+	<div class="row">
+		<div class="col-11">
+			<h4 class="mt-3"></strog>注文内容</strog></h4>
+			　<table class="table table-bordered">
+			　	<tbody>
+				　	<tr class="table-color">
+				　		<td>商品</td>
+				　		<td>単価（税込）</td>
+				　		<td>個数</td>
+				　		<td>小計</td>
+				　	</tr>
+		
+					　<% @order.order_items.each do |order_item| %>
+					　	<tr>
+					　		<td><%= order_item.item.name %></td>
+					　		<td><%= order_item.add_tax_price.to_s(:delimited) %>円</td>
+					　		<td><%= order_item.amount %>個</td>
+					　		<td><%= order_item.sum_of_item_price.to_s(:delimited) %>円</td>
+					　	</tr>
+					　<% end %>
+					</tbody>
+			　</table>
+			</div>
+	　</div>
 	</div>
 </div>
