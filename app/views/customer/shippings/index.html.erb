@@ -20,7 +20,7 @@
         </table>
       <% end %>
     </div>
-    <table class="table table-hover w-50">
+    <table class="table table-hover w-70 mt-3">
       <thead class="table-color">
         <th>郵便番号</th>
         <th>住所</th>
@@ -29,7 +29,7 @@
       </thead>
       <% @shippings.each do |shipping| %>
         <tr>
-          <td><%= shipping.post_code %></td>
+          <td>〒<%= shipping.post_code %></td>
           <td><%= shipping.address %></td>
           <td><%= shipping.name %></td>
           <td>
