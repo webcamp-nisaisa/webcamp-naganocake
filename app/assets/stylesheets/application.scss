@@ -50,3 +50,30 @@
  .table-color {
   background-color: #d8d5d4;
  }
+
+
+.about{
+  background-image: url("cake2.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text{
+ background-color: rgba(255,255,255,0.7);
+}
+
+.link{
+ color: black;
+}
+
+body{
+ font-family: "Cormorant Garamond";
+ font-size: 20px;
+}
