@@ -6,7 +6,7 @@
     <%= attachment_image_tag @item, :image, size: '270x243', format: 'jpeg', fallback: "no_image.jpg" %>
   </div>
   <div class="col-xl-9">
-		<table>
+		<table class="table table-borderless">
 	    <tr>
 		    <th>商品名</th>
 		    <td><%= @item.name %></td>
