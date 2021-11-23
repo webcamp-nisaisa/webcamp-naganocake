@@ -8,8 +8,11 @@ class Customer::ShippingsController < ApplicationController
   def create
     shipping=Shipping.new(shipping_params)
     shipping.customer_id=current_customer.id
-    shipping.save
-    redirect_back(fallback_location:root_path)
+    if shipping.save
+      redirect_back(fallback_location:root_path)
+    else
+      redirect_to request.referer
+    end
   end
 
   def destroy
@@ -24,8 +27,11 @@ class Customer::ShippingsController < ApplicationController
 
   def update
     @shipping=Shipping.find(params[:id])
-    @shipping.update(shipping_params)
-    redirect_to shippings_path
+    if @shipping.update(shipping_params)
+      redirect_to shippings_path
+    else
+      redirect_to request.referer
+    end
   end
 
   private
