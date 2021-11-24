@@ -8,6 +8,7 @@
 - [機能一覧](https://github.com/webcamp-nisaisa/webcamp-naganocake/files/7592720/ACFrOgAeGbvi_aDEOC3FCdkdkIvGJyNyL3lmxKA0gFenXm99kENmZDuKtmo_lBCSZ68JGslz4lMjQtHzNszO4RvFk4Q2ejJU6Xh8m9GIl8Rm-jf8I3MXT_BNhw40JPpI022MrbKn9cgpV24rKxjB.pdf)
 
 ## 開発環境  
-
+Ruby 2.6.3  
+Rails 5.2.5  
 ## チームメンバー  
 
