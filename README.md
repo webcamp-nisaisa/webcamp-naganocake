@@ -22,5 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-[ながのCAKE_ER図.drawio.pdf](https://github.com/webcamp-nisaisa/webcamp-naganocake/files/7592470/CAKE_ER.drawio.pdf)
-![ながのCAKE_ER図](https://user-images.githubusercontent.com/91045221/143168524-ebf97f48-579c-4051-92b4-264169352c52.jpg)
