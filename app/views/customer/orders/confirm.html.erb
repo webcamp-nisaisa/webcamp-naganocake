@@ -19,9 +19,9 @@
       <% @cart_items.each do |cart_item| %>
       <tr>
         <td><%= cart_item.item.name %></td>
-        <td><%= cart_item.item.add_tax_price %></td>
+        <td><%= cart_item.item.add_tax_price.to_s(:delimited) %></td>
         <td><%= cart_item.amount %></td>
-        <td><%= cart_item.subtotal %></td>
+        <td><%= cart_item.subtotal.to_s(:delimited) %></td>
       </tr>
       <% end %>
     </table>
@@ -35,11 +35,11 @@
       </tr>
       <tr>
         <td class="table-color">商品合計</td>
-        <td><%= @total_price_except_fee %></td>
+        <td><%= @total_price_except_fee.to_s(:delimited) %></td>
       </tr>
       <tr>
         <td class="table-color">請求金額</td>
-        <td><%= @order.total_price %></td>
+        <td><%= @order.total_price.to_s(:delimited) %></td>
       </tr>
     </table>
   </div>
