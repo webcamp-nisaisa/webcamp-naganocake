@@ -1,6 +1,7 @@
 # NAGANOCAKE  
 長野県にある小さな洋菓子店「ながのCAKE」の商品を通販するためのECサイト開発。  
-![NaGANO cake](https://user-images.githubusercontent.com/83991220/143175725-db6de984-4c38-4a85-8f42-78eb13e5b629.png)
+![NaGANO cake](https://user-images.githubusercontent.com/83991220/143175787-28b4a0b7-789c-4679-89b3-2ee77b892469.png)
+
 
 ## 設計  
 - [要件定義書](https://github.com/webcamp-nisaisa/webcamp-naganocake/files/7592692/default.pdf)  
