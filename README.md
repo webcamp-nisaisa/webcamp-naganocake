@@ -1,4 +1,5 @@
-# NAGANOCAKE
+# NAGANOCAKE  
+長野県にある小さな洋菓子店「ながのCAKE」の商品を通販するためのECサイト開発。  
 ## 設計  
 - [要件定義書](https://github.com/webcamp-nisaisa/webcamp-naganocake/files/7592692/default.pdf)  
 - [ながのCAKE_ER図](https://github.com/webcamp-nisaisa/webcamp-naganocake/files/7592702/CAKE_ER.drawio.pdf)  
@@ -9,7 +10,7 @@
 
 ## 開発環境  
 - Ruby 2.6.3  
-- Rails 5.2.5  
+- Rails 5.2.6  
 ## チームメンバー  
 - ぶっちょ
 - さしみ
