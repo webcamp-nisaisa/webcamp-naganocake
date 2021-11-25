@@ -14,7 +14,7 @@ class Customer::OrdersController < ApplicationController
 
   def show
     if params[:id]=="confirm"
-      redirect_to cart_items_path
+      redirect_to new_order_path
     else 
       @order = Order.find(params[:id])
     end
