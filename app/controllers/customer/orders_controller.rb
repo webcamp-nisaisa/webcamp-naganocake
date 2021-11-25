@@ -13,8 +13,12 @@ class Customer::OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find(params[:id])
-  end
+    if params[:id]=="confirm"
+      redirect_to new_order_path
+    else 
+      @order = Order.find(params[:id])
+    end
+  end 
 
   def confirm
     @cart_items=current_customer.cart_items
