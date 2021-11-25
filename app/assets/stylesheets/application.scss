@@ -81,16 +81,30 @@ body{
  font-size: 20px;
 }
 
-.top-image{
- background-image: url(top.jpeg);
- height: 350px;
+.box{
+ height:400px;
+}
+.top1{
+ background-image: url(top2.jpg);
+ background-size: cover;
+ background-position: center;
+}
+.top2{
+ background-image: url(top3.jpg);
+ background-size: cover;
+ background-position: center;
+}
+.top3{
+ background-image: url(top4.jpeg);
  background-size: cover;
  background-position: center;
 }
 
-.top h4{
+.top1 h4{
  color: white;
+ padding:10px 0;
 }
+
 header
 {
  font-family:"Cormorant Garamond",serif;
