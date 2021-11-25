@@ -1,0 +1,56 @@
+  <div class="row">
+    <div class="col m-3">
+      <h3><mark><%= @customer.full_name %>さんの会員詳細</mark></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-md-1 col-md-10 offset-md-1">
+      <table class="table table-borderless">
+        <tr>
+          <th>会員ID</th>
+          <td><%= @customer.id %></td>
+        </tr>
+        <tr>
+          <th>氏名</th>
+          <td><%= @customer.full_name %></td>
+        </tr>
+        <tr>
+          <th>フリガナ</th>
+          <td><%= @customer.full_name_kana %></td>
+        </tr>
+        <tr>
+          <th>郵便番号</th>
+          <td><%= @customer.post_code %></td>
+        </tr>
+        <tr>
+          <th>住所</th>
+          <td><%= @customer.address %></td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td><%= @customer.phone_number %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><%= @customer.email %></td>
+        </tr>
+        <tr>
+          <th>会員ステータス</th>
+          <td>
+            <% if @customer.is_quited == false %>
+              <div class="text-success">有効</div>
+            <% else %>
+              <div class="text-secondary">退会</div>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>
+            <%= link_to "編集する", edit_admin_customer_path(@customer), class: "btn move_button motion" %>
+            <%= link_to "注文履歴一覧へ戻る", admin_root_path, class: "btn move_button motion" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
