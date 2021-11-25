@@ -82,27 +82,26 @@ body{
 }
 
 .box{
- height:400px;
+ height:500px;
 }
 .top1{
- background-image: url(top2.jpg);
- background-size: cover;
- background-position: center;
+ background-image: url(top1.jpg);
 }
 .top2{
  background-image: url(top3.jpg);
- background-size: cover;
- background-position: center;
 }
 .top3{
- background-image: url(top4.jpeg);
- background-size: cover;
- background-position: center;
+ background-image: url(top4.jpg);
+}
+.top4{
+ background-image: url(top-cake.jpeg);
 }
 
-.top1 h4{
+.top-text{
+ margin: 8% 28%;
+ background-color: rgba(0,0,0,0.5);
  color: white;
- padding:10px 0;
+ line-height:60px;
 }
 
 header
